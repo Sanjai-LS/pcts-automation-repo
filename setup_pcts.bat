@@ -17,8 +17,8 @@ echo Configuring Git...
 git config --global core.longpaths true
 git config --global core.autocrlf false
 
-set /p username=Enter your Gerrit username: 
-set /p email=Enter your email: 
+set /p username=Enter your Gerrit username: sanl
+set /p email=Enter your email: Sanjai.L@harman.com 
 
 git config --global user.name "%username%"
 git config --global user.email "%email%"
