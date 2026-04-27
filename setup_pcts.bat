@@ -40,8 +40,9 @@ ssh-keygen -t rsa -b 4096 -C "%email%" -f %USERPROFILE%\.ssh\id_rsa -N ""
 :: Step 5 - Start SSH Agent
 echo Starting SSH agent...
 
-powershell -Command "Start-Service ssh-agent"
-ssh-add %USERPROFILE%\.ssh\id_rsa
+echo Starting SSH agent using Git Bash...
+
+bash -c "eval \$(ssh-agent -s) && ssh-add ~/.ssh/id_rsa"
 
 :: Step 6 - Show Public Key
 echo ===== COPY THIS SSH KEY TO GERRIT =====
